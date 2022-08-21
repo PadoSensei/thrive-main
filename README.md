@@ -5,7 +5,19 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Dev Log
 
 - Init Project (CRA TypeScript with Mantine CSS)
--
+- Added AppShell
+
+## Currently working on....
+
+- Research Mantine and build out layout with card component
+
+## Wishlist / ToDo
+
+- Add linter and other extensions
+- CMS, Strapi?
+- SSR
+- Analytics
+- Create Test Data
 
 ## Available Scripts
 
