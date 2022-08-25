@@ -1,9 +1,16 @@
 import React from 'react';
+import AppCard from './AppCard'
 
 const Main = () => {
     return (
         <>
-            This is the Main
+            <AppCard />
+            <AppCard />
+            <AppCard />
+            <AppCard />
+            <AppCard />
+            <AppCard />
+            <AppCard />
         </>
     );
 };

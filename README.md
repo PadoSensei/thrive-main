@@ -6,6 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 - Init Project (CRA TypeScript with Mantine CSS)
 - Added AppShell
+- Added Layout Components
 
 ## Currently working on....
 
@@ -15,10 +16,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 - Add linter and other extensions
 - CMS, Strapi?
-- SSR
+- SSR (Issue adding to typescript, hydrate issue? Use Razzle? Is SSR required?)
 - Analytics
 - Create Test Data
 - Deployment
+- Add Routes (About page, Contact Page)
+-
 
 ## Available Scripts
 
