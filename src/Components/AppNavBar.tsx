@@ -3,9 +3,6 @@ import React from 'react';
 
 
 type Props = {
-    //width: number,
-    //p: string,
-    //setOpened: React.Dispatch<React.SetStateAction<any>>, 
     opened: boolean
 }
 

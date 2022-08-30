@@ -1,5 +1,6 @@
-import {Header, Text,MediaQuery, Burger,useMantineTheme } from '@mantine/core';
+import {Header, Text,MediaQuery, Burger,useMantineTheme, Group } from '@mantine/core';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 type Props = {
@@ -24,8 +25,12 @@ const AppHeader: React.FC<Props> = ({height, p, setOpened, opened}) => {
                 mr="xl"
               />
             </MediaQuery>
-
-            <Text>Application header</Text>
+            <Group>
+                <Text>Application Navbar Header</Text>
+                <Text to="/" component={Link} variant="link">Home</Text>
+                <Text to="/about" component={Link} variant="link">About</Text>
+                <Text to="/contact" component={Link} variant="link">Contact</Text>
+            </Group>
           </div>
         </Header>
     );
