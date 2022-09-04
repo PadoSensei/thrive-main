@@ -10,6 +10,10 @@ type Props = {
     opened: boolean
 }
 
+
+// Refactor: add logo
+// Add light / dark toggle
+// Add language toggle
 const AppHeader: React.FC<Props> = ({height, p, setOpened, opened}) => {
     const theme = useMantineTheme();
     
