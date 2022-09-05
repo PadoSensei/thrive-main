@@ -3,7 +3,7 @@ import dummyData from '../dummyData';
 
 type bizCard = {
     dataNumber: number;
-    image: string;
+    images: string[];
     title: string;
     badgeText: string;
     altText: string;
