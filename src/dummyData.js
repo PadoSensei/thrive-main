@@ -37,7 +37,7 @@ const stairs = [
   Staircase_Japan,
   Staircase_Peru,
 ];
-const abandoned = [Abandoned_Bridge_Japan, Abandoned_Lighthouse, Traffic_Jam];
+const abandoned = [Abandoned_Bridge_Japan, Traffic_Jam];
 const ireland = [irishCastle, Ireland_Woods, Scotland];
 const houses = [
   Villa_Germany,
@@ -48,7 +48,7 @@ const houses = [
 const island = [
   Abandoned_Island_City,
   Abandoned_Island_Italy,
-  Abandoned_Island_Portugal,
+  Abandoned_Lighthouse,
 ];
 const church = [Church_Ukraine, Church_Portugal, Missile_Silo];
 const castle = [Castle_France_2, Castle_France, Castle_Scotland];
@@ -57,71 +57,71 @@ const dummyData = [
   {
     dataNumber: 1,
     images: [...castle],
-    title: "Mad Looking Castles!",
+    title: "Mad Looking Castles",
     badgeText: "On Sale",
-    altText: "Norway",
+    altText: "Castles",
     blurbText:
-      "With Fjord Tours you can explore more of the magical fjord landscapes with tours and activities on and around the fjords of Norway",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac nulla nulla. Pellentesque consectetur augue justo, maximus interdum tellus sodales non. Quisque eleifend convallis tempor.",
     buttonText: "Book classic tour now",
   },
   {
     dataNumber: 2,
     images: [...church],
-    title: "Abandoned Churches!",
+    title: "Abandoned Churches",
     badgeText: "On Sale",
-    altText: "Norway",
+    altText: "Churches",
     blurbText:
-      "With Fjord Tours you can explore more of the magical fjord landscapes with tours and activities on and around the fjords of Norway",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac nulla nulla. Pellentesque consectetur augue justo, maximus interdum tellus sodales non. Quisque eleifend convallis tempor.",
     buttonText: "Book classic tour now",
   },
   {
     dataNumber: 3,
     images: [...island],
-    title: "Norway Fjord Adventures",
+    title: "Weird Tiny Islands",
     badgeText: "On Sale",
-    altText: "Norway",
+    altText: "Islands",
     blurbText:
-      "With Fjord Tours you can explore more of the magical fjord landscapes with tours and activities on and around the fjords of Norway",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac nulla nulla. Pellentesque consectetur augue justo, maximus interdum tellus sodales non. Quisque eleifend convallis tempor.",
     buttonText: "Book classic tour now",
   },
   {
     dataNumber: 4,
     images: [...stairs],
-    title: "Norway Fjord Adventures",
-    badgeText: "On Sale",
-    altText: "Norway",
+    title: "Creepy Staircases",
+    badgeText: "Sold Out",
+    altText: "Stairs",
     blurbText:
-      "With Fjord Tours you can explore more of the magical fjord landscapes with tours and activities on and around the fjords of Norway",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac nulla nulla. Pellentesque consectetur augue justo, maximus interdum tellus sodales non. Quisque eleifend convallis tempor.",
     buttonText: "Book classic tour now",
   },
   {
     dataNumber: 5,
     images: [...houses],
-    title: "Norway Fjord Adventures",
+    title: "Overgrown Houses",
     badgeText: "On Sale",
-    altText: "Norway",
+    altText: "Houses",
     blurbText:
-      "With Fjord Tours you can explore more of the magical fjord landscapes with tours and activities on and around the fjords of Norway",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac nulla nulla. Pellentesque consectetur augue justo, maximus interdum tellus sodales non. Quisque eleifend convallis tempor.",
     buttonText: "Book classic tour now",
   },
   {
     dataNumber: 6,
     images: [...ireland],
-    title: "Norway Fjord Adventures",
-    badgeText: "On Sale",
-    altText: "Norway",
+    title: "Pretty Ireland",
+    badgeText: "Sold Out",
+    altText: "Ireland",
     blurbText:
-      "With Fjord Tours you can explore more of the magical fjord landscapes with tours and activities on and around the fjords of Norway",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac nulla nulla. Pellentesque consectetur augue justo, maximus interdum tellus sodales non. Quisque eleifend convallis tempor.",
     buttonText: "Book classic tour now",
   },
   {
     dataNumber: 7,
     images: [...abandoned],
-    title: "Norway Fjord Adventures",
+    title: "Reclaimed By Nature",
     badgeText: "On Sale",
-    altText: "Norway",
+    altText: "Abandoned",
     blurbText:
-      "With Fjord Tours you can explore more of the magical fjord landscapes with tours and activities on and around the fjords of Norway",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac nulla nulla. Pellentesque consectetur augue justo, maximus interdum tellus sodales non. Quisque eleifend convallis tempor.",
     buttonText: "Book classic tour now",
   },
 ];

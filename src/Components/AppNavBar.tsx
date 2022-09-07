@@ -6,6 +6,8 @@ type Props = {
     opened: boolean
 }
 
+// Refactor: Add Filter buttons; [All, ...categories]
+
 const AppNavBar: React.FC<Props> = ({opened}) => {
     return (
         <Navbar p="md" hiddenBreakpoint="sm" hidden={!opened} width={{ sm: 200, lg: 300 }}>
