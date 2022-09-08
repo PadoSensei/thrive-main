@@ -10,6 +10,7 @@ type Props = {
   badgeText: string
 }
 
+// Refactor: add image carousel
 const AppCard: React.FC<Props> = ({ image, title, altText, blurbText, buttonText, badgeText }) => {
   return (
     <Card shadow="sm" p="lg" radius="md" withBorder>
