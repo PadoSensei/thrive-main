@@ -1,8 +1,9 @@
 import { Card, Image, Text, Badge, Button, Group } from '@mantine/core';
+import { Carousel } from '@mantine/carousel';
 
 type Props = {
   dataNumber: number,
-  image: string,
+  images: string[],
   title: string,
   altText: string,
   blurbText: string, 
@@ -10,17 +11,22 @@ type Props = {
   badgeText: string
 }
 
-// Refactor: add image carousel
-const AppCard: React.FC<Props> = ({ image, title, altText, blurbText, buttonText, badgeText }) => {
+const AppCard: React.FC<Props> = ({ images, title, altText, blurbText, buttonText, badgeText }) => {
+  
   return (
     <Card shadow="sm" p="lg" radius="md" withBorder>
-      <Card.Section>
-        <Image
-          src={image}
-          height={160}
-          alt={altText}
-        />
-      </Card.Section>
+      <Carousel sx={{ maxWidth: 320 }} mx="auto" withIndicators height={200}>
+        {images.map(image => {
+          return (
+          <Carousel.Slide>
+            <Image
+              src={image}
+              height={240}
+              alt={altText}
+            />
+          </Carousel.Slide>
+        )})}
+    </Carousel>
 
       <Group position="apart" mt="md" mb="xs">
         <Text weight={500}>{title}</Text>

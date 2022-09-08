@@ -30,10 +30,10 @@ const Main = () => {
 
     return (
         <>
-        {!isLoading ? <AppLoader /> : data.map(({dataNumber, image, title, badgeText, altText, blurbText, buttonText}) => {
+        {!isLoading ? <AppLoader /> : data.map(({dataNumber, images, title, badgeText, altText, blurbText, buttonText}) => {
         return <AppCard 
             key={dataNumber}
-            image={image} 
+            images={images} 
             title={title} 
             altText={altText}
             badgeText={badgeText}
