@@ -1,7 +1,7 @@
-import AppCard from '../Components/AppCard';
+import AppCard from '../components/AppCard';
 import { useEffect, useState } from 'react';
-import AppLoader from '../Components/AppLoader';
-import useFetchData from '../Components/useFetchData';
+import AppLoader from '../components/AppLoader';
+import useFetchData from '../components/useFetchData';
 
 const Main = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -36,7 +36,7 @@ const Main = () => {
                 badgeText={badgeText}
                 blurbText={blurbText}
                 buttonText={buttonText}
-                dataNumber={dataNumber}
+                // dataNumber={dataNumber}
               />
             );
           }

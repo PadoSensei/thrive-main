@@ -1,6 +1,6 @@
 import { AppShell, useMantineTheme } from '@mantine/core';
-import AppHeader from './Components/AppHeader';
-import AppNavBar from './Components/AppNavBar';
+import AppHeader from './components/AppHeader';
+import AppNavBar from './components/AppNavBar';
 import { useState } from 'react';
 import Main from './pages/Main';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';

@@ -24,7 +24,7 @@ const AppGrid = ({ data }) => {
               badgeText={badgeText}
               blurbText={blurbText}
               buttonText={buttonText}
-              dataNumber={dataNumber}
+              // dataNumber={dataNumber}
             />
           );
         }
