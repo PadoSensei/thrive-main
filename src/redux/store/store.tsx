@@ -1,11 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
+import rootReducer from '../reducers/rootReducer';
+//import { devToolsEnhancer } from '@redux-devtools-extension';
 
 export const store = configureStore({
-  reducer: {
-    // posts: postsReducer,
-    // comments: commentsReducer,
-    // users: usersReducer,
-  },
+  reducer: {rootReducer},
 })
 
 export type RootState = ReturnType<typeof store.getState>
