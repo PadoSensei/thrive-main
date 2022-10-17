@@ -11,7 +11,6 @@ const Main = () => {
   //console.log(wasDataFetched);
 
   // redux
- 
   const { count } = useAppSelector((state: AppState) => state.count);
   //const count = useAppSelector<AppState>((state) => state.count.CountState);
   //const { name } = useAppSelector((state: AppState) => state.name);
