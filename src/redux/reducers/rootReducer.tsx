@@ -3,11 +3,9 @@ import countReducer from './countReducer';
 import nameReducer from './nameReducer';
 
 const rootReducer = combineReducers({
-    count: countReducer,
-    name: nameReducer,
-})
-
-console.log(rootReducer)
+  count: countReducer,
+  name: nameReducer,
+});
 
 export type AppState = ReturnType<typeof rootReducer>;
 export default rootReducer;
