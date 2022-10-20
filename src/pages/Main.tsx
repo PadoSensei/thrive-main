@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import AppLoader from '../components/AppLoader';
 import useFetchData from '../components/useFetchData';
 import { AppState } from '../redux/reducers/rootReducer';
-import { useAppDispatch, useAppSelector } from '../hooks';
+import { useAppDispatch, useAppSelector, useCountSelector } from '../hooks';
 import { useSelector } from 'react-redux';
 
 const Main = () => {
@@ -12,8 +12,10 @@ const Main = () => {
   //console.log(wasDataFetched);
 
   // redux
-  //const { count } = useAppSelector((state: AppState) => state.count);
-  const count = useSelector((state: AppState) => state.count);
+  // const  count  = useAppSelector((state: AppState) => state.count);
+
+  const count = useCountSelector();
+
   //const count = useAppSelector<AppState>((state) => state.count.CountState);
   //const { name } = useAppSelector((state: AppState) => state.name);
   console.log(count);
