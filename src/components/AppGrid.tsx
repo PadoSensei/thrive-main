@@ -3,32 +3,21 @@ import AppCard from "./AppCard";
 
 // Simple 3 column layout
 const AppGrid = ({ data }) => {
+  console.log(data)
   return (
     <SimpleGrid cols={3} spacing={"sm"}>
-      {data.map(
-        ({
-          dataNumber,
-          images,
-          title,
-          badgeText,
-          altText,
-          blurbText,
-          buttonText,
-        }) => {
-          return (
-            <AppCard
-              key={dataNumber}
-              images={images}
-              title={title}
-              altText={altText}
-              badgeText={badgeText}
-              blurbText={blurbText}
-              buttonText={buttonText}
-              // dataNumber={dataNumber}
-            />
-          );
-        }
-      )}
+      {data.map(card => (
+      <AppCard 
+        key={card.dataNumber} 
+        images={card.images}
+        title={card.title}
+        altText={card.altText}
+        badgeText={card.badgeText}
+        buttonText={card.buttonText}
+        dataNumber={card.dataNumber}
+        blurbText={card.blurbText}
+      />
+      ))}
     </SimpleGrid>
   );
 };

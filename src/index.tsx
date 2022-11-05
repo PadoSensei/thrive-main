@@ -1,23 +1,22 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { configureStore } from '@reduxjs/toolkit';
+import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import rootReducer from './redux/reducers/rootReducer';
+
+//redux imports 
+// Provider wraps the app
+// Provider is loaded with store object
 import { store } from './redux/store/store';
+import { Provider } from 'react-redux';
 
-// const store = configureStore({
-//   reducer: {rootReducer}
-// })
+// React 18 - createRoot update
+const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 
-// type RootState = ReturnType<typeof store.getState>;
-
-ReactDOM.render(
+root.render(
   <Provider store={store}>
     <App />
-  </Provider>, document.getElementById("root")
+  </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function
