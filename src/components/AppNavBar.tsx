@@ -14,18 +14,20 @@ const AppNavBar: React.FC<Props> = ({opened}) => {
     
     console.log(
         useSelector((store) => {
-            console.log(store);
+            console.log(store.rootReducer.count.count);
+            const {name} = store;
+            console.log(name)
         })
     )
 
-    //const count  = useSelector((state) => state.count)
-    //console.log(count)
+    const {count}  = useSelector((state) => state.rootReducer.count)
+    console.log(count)
     return (
         <Navbar p="md" hiddenBreakpoint="sm" hidden={!opened} width={{ sm: 200, lg: 300 }}>
           <Text>Application navbar</Text>
           <Button>Increase</Button>
           <Button>Decrease</Button>
-          {/* <Text>Count: {count}</Text> */}
+          <Text>Count: {count}</Text>
         </Navbar>
     );
 };

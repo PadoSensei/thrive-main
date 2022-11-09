@@ -16,8 +16,8 @@ export const store = configureStore({
 export type AppDispatch = typeof store.dispatch
 export const useAppDispatch = () => useDispatch()
 
-// Don't know what a thunk is
-export type AppThunk = ThunkAction<void, RootState, unknown, Action>
+// Don't know what a thunk is, removed RootState from export here
+export type AppThunk = ThunkAction<void, unknown, Action>
 
 
 // RootState is the state of the store
