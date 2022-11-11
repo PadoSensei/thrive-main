@@ -1,7 +1,10 @@
 // @ts-nocheck
 import {Button, Navbar, Text} from '@mantine/core';
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+// import { addFive } from '../redux/features/countSlice';
+// import { full, odd, even, none } from '../redux/features/filterSlice';
+import { full, islands, castles } from '../redux/features/gridSlice';
 
 
 type Props = {
@@ -11,23 +14,37 @@ type Props = {
 // Refactor: Add Filter buttons; [All, ...categories]
 
 const AppNavBar: React.FC<Props> = ({opened}) => {
-    
-    console.log(
-        useSelector((store) => {
-            console.log(store.rootReducer.count.count);
-            const {name} = store;
-            console.log(name)
-        })
-    )
+    const dispatch = useDispatch();
 
-    const {count}  = useSelector((state) => state.rootReducer.count)
-    console.log(count)
+    const showFull = () => {
+        dispatch(full())
+    }
+
+    const showIslands = () => {
+        dispatch(islands())
+    }
+
+    const showCastles = () => {
+        dispatch(castles())
+    }
+
+    // const showNone = () => {
+    //     dispatch(none())
+    // }
+    
+    // console.log(
+    //     useSelector((store) => {
+    //         //const {name} = store;
+    //         console.log(store)
+    //     })
+    // )
+
     return (
         <Navbar p="md" hiddenBreakpoint="sm" hidden={!opened} width={{ sm: 200, lg: 300 }}>
           <Text>Application navbar</Text>
-          <Button>Increase</Button>
-          <Button>Decrease</Button>
-          <Text>Count: {count}</Text>
+          <Button onClick={showFull}>All</Button>
+          <Button onClick={showIslands}>Islands and Ireland</Button>
+          <Button onClick={showCastles}>Castles and Churches</Button> 
         </Navbar>
     );
 };

@@ -30,7 +30,7 @@ const AppHeader: React.FC<Props> = ({height, p, setOpened, opened}) => {
               />
             </MediaQuery>
             <Group>
-                <Text>Application Navbar Header</Text>
+                <Text>Application Header</Text>
                 <Text to="/" component={Link} variant="link">Home</Text>
                 <Text to="/about" component={Link} variant="link">About</Text>
                 <Text to="/contact" component={Link} variant="link">Contact</Text>

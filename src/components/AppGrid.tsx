@@ -3,7 +3,6 @@ import AppCard from "./AppCard";
 
 // Simple 3 column layout
 const AppGrid = ({ data }) => {
-  console.log(data)
   return (
     <SimpleGrid cols={3} spacing={"sm"}>
       {data.map(card => (

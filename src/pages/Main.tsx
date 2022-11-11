@@ -6,31 +6,29 @@ import AppLoader from '../components/AppLoader';
 import AppGrid from '../components/AppGrid';
 
 import useFetchData from '../components/useFetchData';
-
-// 
-import { useSelector } from 'react-redux';
-
+import { full, odd, even, none } from './filterSlice';
 import { AppState } from '../redux/rootReducer';
-import { useAppDispatch, useAppSelector, useCountSelector } from '../hooks';
+//import { useAppDispatch, useAppSelector, useCountSelector } from '../hooks';
+import { useSelector, useDispatch } from 'react-redux';
 
 const Main = () => {
   const [isLoading, setIsLoading] = useState(false);
   const { wasDataFetched, data } = useFetchData();
+  const dispatch = useDispatch();
   //console.log(wasDataFetched);
+  const {display} = useSelector((state) => state.rootReducer.filter)
+  const { dummyData }  = useSelector((state) => state.rootReducer.grid) 
 
   // redux
   //const count = useSelector((state: AppState) => state.count);
-  const count = useSelector((state) => state.countReducer)
-
-  console.log(count);
- 
+  
   useEffect(() => {
     setIsLoading(wasDataFetched);
   }, [wasDataFetched]);
 
   return (
     <>
-      {!isLoading ? <AppLoader /> : <AppGrid data={data} /> }
+      {!isLoading ? <AppLoader /> : <AppGrid data={dummyData} /> }
     </>
   );
 };

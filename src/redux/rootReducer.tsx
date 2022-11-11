@@ -1,12 +1,14 @@
 import { combineReducers } from '@reduxjs/toolkit';
 import countSlice from './features/countSlice';
-//import nameReducer from './nameReducer';
+import filterSlice from './features/filterSlice';
+import gridSlice from './features/gridSlice';
 
 
 // combines all the reducer actions in one place for better mgmt
 const rootReducer = combineReducers({
   count: countSlice,
-  //name: nameReducer,
+  filter: filterSlice,
+  grid: gridSlice
 });
 
 export type RootState = ReturnType<typeof rootReducer>;
