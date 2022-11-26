@@ -6,6 +6,7 @@ import dummyData from '../../dummyData';
 // reducers cut it to Islands & Ireland, Churches and Castles, Houses & Staircases
 const initialState = {
     dummyData: dummyData,
+    displayGrid: 'none'
 }
 
 const gridSlice = createSlice({
@@ -14,32 +15,36 @@ const gridSlice = createSlice({
     reducers: {
         // returns all the array
         full: (state) => {
-            state = initialState
+            state.displayGrid = 'all'
             console.log("all", state.dummyData)
         },
         // return islands and ireland
+
         islands: (state) => {
-            //const { dummyData } = state.dummyData
-            state.dummyData = state.dummyData.filter(obj => obj.altText === "Islands" || obj.altText === "Ireland")
+            //state = initialState
+            //const filteredCards = state.dummyData.filter(obj => obj.altText === "Islands" || obj.altText === "Ireland")
+            state.displayGrid = "Islands"
             console.log("islands and ireland", state.dummyData)
         },
         // // return castles and churches
         castles: (state) => {
-            state.dummyData = state.dummyData.filter(obj => obj.altText === "Churches" || obj.altText === "Castles")
+            state = initialState
+            state.displayGrid = state.dummyData.filter(obj => obj.altText === "Churches" || obj.altText === "Castles")
             console.log("castles and churches", state.dummyData)
         },
-        // // return stairs and houses
-        // even: (state) => {
-        //     state.dummyData = "even";
-        //     console.log("stairs and houses")
-        // },
-        // // return none
-        // none: (state) => {
-        //     state.dummyData = []
-        //     console.log("Empty array")
-        // }
+        // return stairs and houses
+        houses: (state) => {
+            state = initialState
+            state.displayGrid = state.dummyData.filter(obj => obj.altText === "Stairs" || obj.altText === "Houses")
+            console.log("stairs and houses", state.dummyData)
+        },
+        // return none
+        none: (state) => {
+            state.dummyData = []
+            console.log("Empty array")
+        }
     }
 });
 
-export const { full, islands, castles} = gridSlice.actions;
+export const { full, islands, castles, houses, none} = gridSlice.actions;
 export default gridSlice.reducer;

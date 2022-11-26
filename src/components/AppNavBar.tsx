@@ -1,10 +1,8 @@
 // @ts-nocheck
 import {Button, Navbar, Text} from '@mantine/core';
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-// import { addFive } from '../redux/features/countSlice';
-// import { full, odd, even, none } from '../redux/features/filterSlice';
-import { full, islands, castles } from '../redux/features/gridSlice';
+import { useDispatch } from 'react-redux';
+import { full, islands, castles, houses, none } from '../redux/features/gridSlice';
 
 
 type Props = {
@@ -28,16 +26,14 @@ const AppNavBar: React.FC<Props> = ({opened}) => {
         dispatch(castles())
     }
 
-    // const showNone = () => {
-    //     dispatch(none())
-    // }
+    const showHouses = () => {
+        dispatch(houses())
+    }
+
+    const showNone = () => {
+        dispatch(none())
+    }
     
-    // console.log(
-    //     useSelector((store) => {
-    //         //const {name} = store;
-    //         console.log(store)
-    //     })
-    // )
 
     return (
         <Navbar p="md" hiddenBreakpoint="sm" hidden={!opened} width={{ sm: 200, lg: 300 }}>
@@ -45,6 +41,8 @@ const AppNavBar: React.FC<Props> = ({opened}) => {
           <Button onClick={showFull}>All</Button>
           <Button onClick={showIslands}>Islands and Ireland</Button>
           <Button onClick={showCastles}>Castles and Churches</Button> 
+          <Button onClick={showHouses}>Stairs and Houses</Button> 
+          <Button onClick={showNone}>None</Button> 
         </Navbar>
     );
 };

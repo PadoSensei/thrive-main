@@ -4,32 +4,43 @@ import { useEffect, useState } from 'react';
 // components
 import AppLoader from '../components/AppLoader';
 import AppGrid from '../components/AppGrid';
-
 import useFetchData from '../components/useFetchData';
-import { full, odd, even, none } from './filterSlice';
-import { AppState } from '../redux/rootReducer';
 //import { useAppDispatch, useAppSelector, useCountSelector } from '../hooks';
 import { useSelector, useDispatch } from 'react-redux';
 
 const Main = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const [displayedData, setDisplayedData] = useState(null);
   const { wasDataFetched, data } = useFetchData();
-  const dispatch = useDispatch();
   //console.log(wasDataFetched);
-  const {display} = useSelector((state) => state.rootReducer.filter)
+  const { displayGrid }  = useSelector((state) => state.rootReducer.grid) 
   const { dummyData }  = useSelector((state) => state.rootReducer.grid) 
 
-  // redux
-  //const count = useSelector((state: AppState) => state.count);
-  
+
   useEffect(() => {
-    setIsLoading(wasDataFetched);
-  }, [wasDataFetched]);
+    let filtered;
+    if(displayGrid === "Island"){
+      filtered = state.dummyData.filter(obj => obj.altText === "Islands" || obj.altText === "Ireland")
+
+    }
+    setDisplayedData(filtered)
+    setIsLoading(true)
+  }, [displayGrid])
+  
+
+
+  // useEffect(() => {
+  //   setIsLoading(wasDataFetched);
+  // }, [wasDataFetched]);
 
   return (
-    <>
-      {!isLoading ? <AppLoader /> : <AppGrid data={dummyData} /> }
-    </>
+     <>
+      {!isLoading ? <AppLoader /> : <AppGrid data={data} /> }
+     </>
+    
+    /* <h1>{displayGrid}</h1>
+      <AppGrid data={displayedData} />
+    </> */
   );
 };
 
